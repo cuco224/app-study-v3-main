@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#007bff">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="icon-192x192.png">
+    <title>Study App ASIR - Aplicación de Estudio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-logo">
+                <i class="fas fa-graduation-cap"></i>
+            </div>
+            <h2>Study App ASIR</h2>
+            <div class="loading-spinner"></div>
+        </div>
+    </div>
+
+    <!-- Main App Content -->
+    <div id="app-content" class="hidden">
+        <header>
+            <div class="header-left">
+                <button id="home-btn" class="mode-btn" onclick="showHome()">
+                    <i class="fas fa-home"></i> Inicio
+                </button>
+                <button id="toggle-dark-mode" class="mode-btn" onclick="toggleDarkMode()">
+                    <i class="fas fa-moon"></i> Modo Oscuro
+                </button>
+            </div>
+            <h1 class="animate__animated animate__fadeIn">
+                <i class="fas fa-graduation-cap"></i>
+                Study App ASIR
+            </h1>
+            <div class="header-right">
+                <div id="timer" class="timer hidden">00:00</div>
+                <div id="progress-info" class="progress-info hidden">
+                    <span id="question-counter">0/0</span>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <!-- Home Screen - Subject Selection -->
+            <div id="home-screen" class="home-screen animate__animated animate__fadeIn">
+                <div class="welcome-section">
+                    <h2>Bienvenido a tu aplicación de estudio</h2>
+                    <p>Selecciona una asignatura para comenzar a estudiar</p>
+                </div>
+                
+                <div class="subjects-grid">
+                    <div class="subject-card available" onclick="selectSubject('digitalizacion')">
+                        <div class="subject-icon">
+                            <i class="fas fa-digital-tachograph"></i>
+                        </div>
+                        <h3>Digitalización</h3>
+                        <p>Digitalización de los Sectores Productivos</p>
+                        <div class="subject-status">
+                            <span class="status-badge available">Disponible</span>
+                        </div>
+                    </div>
+
+                    <div class="subject-card available" onclick="selectSubject('fol')">
+                        <div class="subject-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <h3>FOL</h3>
+                        <p>Formación y Orientación Laboral</p>
+                        <div class="subject-status">
+                            <span class="status-badge available">Disponible</span>
+                        </div>
+                    </div>
+
+                    <div class="subject-card available" onclick="selectSubject('sistemasoperativos')">
+                        <div class="subject-icon">
+                            <i class="fas fa-desktop"></i>
+                        </div>
+                        <h3>Sistemas Operativos</h3>
+                        <p>Sistemas Operativos Monopuesto</p>
+                        <div class="subject-status">
+                            <span class="status-badge available">Disponible</span>
+                        </div>
+                    </div>
+
+                    <div class="subject-card coming-soon">
+                        <div class="subject-icon">
+                            <i class="fas fa-language"></i>
+                        </div>
+                        <h3>Inglés</h3>
+                        <p>Inglés Técnico</p>
+                        <div class="subject-status">
+                            <span class="status-badge coming-soon">Próximamente</span>
+                        </div>
+                    </div>
+
+                    <div class="subject-card available" onclick="selectSubject('lenguajesmarca')">
+                        <div class="subject-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Lenguajes de Marca</h3>
+                        <p>Lenguajes de Marcas y Sistemas de Gestión</p>
+                        <div class="subject-status">
+                            <span class="status-badge available">Disponible</span>
+                        </div>
+                    </div>
+
+                    <div class="subject-card available" onclick="selectSubject('basesdatos')">
+                        <div class="subject-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h3>Bases de Datos</h3>
+                        <p>Sistemas de Gestión de Bases de Datos</p>
+                        <div class="subject-status">
+                            <span class="status-badge available">Disponible</span>
+                        </div>
+                    </div>
+
+                    <div class="subject-card available" onclick="selectSubject('planificacionredes')">
+                        <div class="subject-icon">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <h3>Planificación y Administración de Redes</h3>
+                        <p>Redes Locales</p>
+                        <div class="subject-status">
+                            <span class="status-badge available">Disponible</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Subject Screen - Topic Selection -->
+            <div id="subject-screen" class="subject-screen hidden">
+                <div class="breadcrumb">
+                    <span onclick="showHome()">Inicio</span>
+                    <i class="fas fa-chevron-right"></i>
+                    <span id="current-subject-name">Asignatura</span>
+                </div>
+                
+                <div class="subject-header">
+                    <h2 id="subject-title">Selecciona un tema</h2>
+                    <p id="subject-description">Elige el tema que quieres estudiar</p>
+                </div>
+
+                <div class="topics-grid" id="topics-grid">
+                    <!-- Topics will be populated by JavaScript -->
+                </div>
+            </div>
+
+            <!-- Quiz Screen -->
+            <div id="quiz-screen" class="quiz-screen hidden">
+                <div class="breadcrumb">
+                    <span onclick="showHome()">Inicio</span>
+                    <i class="fas fa-chevron-right"></i>
+                    <span onclick="showSubject(currentSubject)" id="breadcrumb-subject">Asignatura</span>
+                    <i class="fas fa-chevron-right"></i>
+                    <span id="breadcrumb-topic">Tema 1</span>
+                </div>
+
+                <div class="quiz-controls">
+                    <button id="toggle-review-mode" class="mode-btn" onclick="toggleReviewMode()">
+                        <i class="fas fa-eye"></i> Modo Repaso
+                    </button>
+                    <div class="quiz-progress">
+                        <div id="progress-bar" class="progress-bar"></div>
+                    </div>
+                </div>
+
+                <div class="container animate__animated animate__fadeIn">
+                    <section id="quiz-container" class="quiz-section">
+                        <article id="question" class="question"></article>
+                        <div id="options" class="options"></div>
+                        <div class="nav-buttons">
+                            <button id="prev-btn" class="btn nav-btn" onclick="prevQuestion()">
+                                <i class="fas fa-chevron-left"></i> Anterior
+                            </button>
+                            <button id="next-btn" class="btn nav-btn" onclick="nextQuestion()">
+                                Siguiente <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <!-- Results Screen -->
+            <div id="results-screen" class="results-screen hidden">
+                <div class="results-container">
+                    <h2><i class="fas fa-trophy"></i> Resultados del Cuestionario</h2>
+                    <div id="results-content"></div>
+                    <div class="results-actions">
+                        <button class="btn primary" onclick="restartQuiz()">
+                            <i class="fas fa-redo"></i> Repetir Cuestionario
+                        </button>
+                        <button class="btn secondary" onclick="showSubject(currentSubject)">
+                            <i class="fas fa-list"></i> Volver a Temas
+                        </button>
+                        <button class="btn secondary" onclick="showHome()">
+                            <i class="fas fa-home"></i> Inicio
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
