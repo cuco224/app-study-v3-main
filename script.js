@@ -15,7 +15,8 @@ const subjects = {
         name: 'Digitalización',
         fullName: 'Digitalización de los Sectores Productivos',
         topics: {
-            1: 'Tema 1: Digitalización de los Sectores Productivos'
+            1: 'Tema 1: Digitalización de los Sectores Productivos',
+            2: 'Tema 2: Tecnologías Digitales Habilitadoras'
         }
     },
     fol: {
@@ -29,7 +30,8 @@ const subjects = {
         name: 'Sistemas Operativos',
         fullName: 'Sistemas Operativos Monopuesto',
         topics: {
-            1: 'Tema 1: Introducción a los Sistemas Operativos'
+            1: 'Tema 1: Introducción a los Sistemas Operativos',
+            2: 'Tema 2: Máquinas Virtuales'
         }
     },
     lenguajesmarca: {
@@ -69,7 +71,7 @@ const questionsDatabase = {
             },
             {
                 question: "¿En qué año comenzó la Primera Revolución Industrial (Industria 1.0)?",
-                options: ["1784", "1870", "1969", "2011"],
+                options: ["1760", "1870", "1969", "2011"],
                 answer: 0
             },
             {
@@ -78,8 +80,13 @@ const questionsDatabase = {
                 answer: 0
             },
             {
+                question: "¿Qué invento fue fundamental en la Primera Revolución Industrial?",
+                options: ["La máquina de vapor de James Watt", "El motor de combustión interna", "La electricidad", "El ordenador"],
+                answer: 0
+            },
+            {
                 question: "¿Cuándo comenzó la Segunda Revolución Industrial (Industria 2.0)?",
-                options: ["1870", "1784", "1969", "2011"],
+                options: ["1870", "1760", "1969", "2011"],
                 answer: 0
             },
             {
@@ -93,8 +100,13 @@ const questionsDatabase = {
                 answer: 0
             },
             {
+                question: "¿Qué industrias se desarrollaron especialmente en la Segunda Revolución Industrial?",
+                options: ["Química, eléctrica, siderúrgica y petroquímica", "Solo textil", "Solo agrícola", "Solo minera"],
+                answer: 0
+            },
+            {
                 question: "¿Cuándo comenzó la Tercera Revolución Industrial (Industria 3.0)?",
-                options: ["Década de 1970", "1870", "1784", "2011"],
+                options: ["Década de 1970", "1870", "1760", "2011"],
                 answer: 0
             },
             {
@@ -154,6 +166,568 @@ const questionsDatabase = {
             {
                 question: "¿Cuál es el principal desafío en el diseño de sistemas ciberfísicos?",
                 options: ["Integración de hardware/software con comportamiento humano", "Solo hardware", "Solo software", "Solo redes"],
+                answer: 0
+            },
+            
+            // 1.3 Tecnologías emergentes y transformación digital
+            {
+                question: "¿Qué es el Internet de las Cosas (IoT)?",
+                options: ["Red de dispositivos físicos conectados que recopilan e intercambian datos", "Solo dispositivos móviles conectados", "Únicamente sensores industriales", "Solo electrodomésticos inteligentes"],
+                answer: 0
+            },
+            {
+                question: "¿Cuáles son los componentes principales de un sistema IoT?",
+                options: ["Sensores, conectividad, procesamiento de datos y interfaz de usuario", "Solo sensores", "Solo conectividad", "Solo procesamiento"],
+                answer: 0
+            },
+            {
+                question: "¿Qué es la Inteligencia Artificial (IA)?",
+                options: ["Capacidad de las máquinas para realizar tareas que requieren inteligencia humana", "Solo programas de ordenador", "Únicamente robots", "Solo algoritmos matemáticos"],
+                answer: 0
+            },
+            {
+                question: "¿Cuáles son los tipos principales de aprendizaje automático (Machine Learning)?",
+                options: ["Supervisado, no supervisado y por refuerzo", "Solo supervisado", "Solo no supervisado", "Solo por refuerzo"],
+                answer: 0
+            },
+            {
+                question: "¿Qué es el Big Data?",
+                options: ["Conjuntos de datos tan grandes y complejos que requieren herramientas especiales para su procesamiento", "Solo bases de datos grandes", "Únicamente datos de internet", "Solo información empresarial"],
+                answer: 0
+            },
+            {
+                question: "¿Cuáles son las características del Big Data (las 5 V)?",
+                options: ["Volumen, Velocidad, Variedad, Veracidad y Valor", "Solo Volumen y Velocidad", "Solo Variedad y Valor", "Solo Volumen, Velocidad y Variedad"],
+                answer: 0
+            },
+            {
+                question: "¿Qué es blockchain?",
+                options: ["Tecnología de registro distribuido que mantiene una lista de registros enlazados y asegurados criptográficamente", "Solo una criptomoneda", "Únicamente Bitcoin", "Solo una base de datos"],
+                answer: 0
+            },
+            {
+                question: "¿Cuáles son las ventajas principales de blockchain?",
+                options: ["Descentralización, transparencia, inmutabilidad y seguridad", "Solo descentralización", "Solo transparencia", "Solo seguridad"],
+                answer: 0
+            },
+            {
+                question: "¿Qué es la realidad aumentada (AR)?",
+                options: ["Tecnología que superpone información digital sobre el mundo real", "Solo videojuegos", "Únicamente aplicaciones móviles", "Solo simulaciones"],
+                answer: 0
+            },
+            {
+                question: "¿Qué es la realidad virtual (VR)?",
+                options: ["Tecnología que crea un entorno completamente digital e inmersivo", "Solo videojuegos", "Únicamente simulaciones", "Solo entretenimiento"],
+                answer: 0
+            },
+            {
+                question: "¿Qué diferencia hay entre AR y VR?",
+                options: ["AR añade elementos digitales al mundo real, VR crea un mundo completamente digital", "No hay diferencias", "AR es solo para móviles, VR para ordenadores", "AR es más barata que VR"],
+                answer: 0
+            },
+            {
+                question: "¿Qué es la computación cuántica?",
+                options: ["Tecnología que utiliza principios de la mecánica cuántica para procesar información", "Solo ordenadores muy rápidos", "Únicamente supercomputadoras", "Solo procesadores avanzados"],
+                answer: 0
+            },
+            {
+                question: "¿Cuál es la ventaja principal de la computación cuántica?",
+                options: ["Capacidad de resolver ciertos problemas exponencialmente más rápido que los ordenadores clásicos", "Solo mayor velocidad", "Únicamente menor consumo", "Solo menor tamaño"],
+                answer: 0
+            },
+            {
+                question: "¿Qué es la transformación digital en las empresas?",
+                options: ["Proceso de integración de tecnología digital en todas las áreas de negocio", "Solo comprar ordenadores nuevos", "Únicamente tener página web", "Solo usar redes sociales"],
+                answer: 0
+            },
+            {
+                question: "¿Cuáles son los pilares de la transformación digital?",
+                options: ["Tecnología, datos, procesos y personas", "Solo tecnología", "Solo datos", "Solo procesos"],
+                answer: 0
+            },
+            {
+                question: "¿Qué es la ciberseguridad en el contexto de la digitalización?",
+                options: ["Protección de sistemas, redes y datos digitales contra ataques maliciosos", "Solo antivirus", "Únicamente contraseñas", "Solo firewalls"],
+                answer: 0
+            },
+            {
+                question: "¿Cuáles son los principales tipos de amenazas cibernéticas?",
+                options: ["Malware, phishing, ransomware, ataques DDoS y ingeniería social", "Solo virus", "Solo hackers", "Solo spam"],
+                answer: 0
+            },
+            {
+                question: "¿Qué es la automatización robótica de procesos (RPA)?",
+                options: ["Tecnología que utiliza robots de software para automatizar tareas repetitivas", "Solo robots físicos", "Únicamente inteligencia artificial", "Solo programación"],
+                answer: 0
+            },
+            {
+                question: "¿Cuáles son los beneficios de implementar RPA?",
+                options: ["Reducción de errores, mayor eficiencia, ahorro de costos y liberación de recursos humanos", "Solo reducción de costos", "Solo mayor velocidad", "Solo menos errores"],
+                answer: 0
+            },
+            {
+                question: "¿Qué es la computación en el borde (Edge Computing)?",
+                options: ["Procesamiento de datos cerca de donde se generan en lugar de en centros de datos centralizados", "Solo computación en la nube", "Únicamente servidores locales", "Solo dispositivos móviles"],
+                answer: 0
+            },
+            {
+                question: "¿Cuáles son las ventajas del Edge Computing?",
+                options: ["Menor latencia, reducción del ancho de banda y mayor privacidad", "Solo menor latencia", "Solo reducción de costos", "Solo mayor velocidad"],
+                answer: 0
+            }
+        ],
+        2: [
+            // TEMA 2: TECNOLOGÍAS DIGITALES HABILITADORAS
+            {
+                question: "¿Qué caracteriza principalmente a las tecnologías digitales habilitadoras (TDH)?",
+                options: [
+                    "Permiten la transformación digital y nuevos modelos de negocio",
+                    "Solo mejoran la velocidad de conexión a internet",
+                    "Son exclusivas de grandes empresas tecnológicas",
+                    "Únicamente sustituyen mano de obra por robots"
+                ],
+                answer: 0
+            },
+            {
+                question: "¿Cuál es una característica esencial de la red 5G frente a la 4G?",
+                options: [
+                    "Mayor latencia y consumo de energía",
+                    "Menor velocidad de transmisión",
+                    "Menor latencia y mayor rapidez de conexión",
+                    "Uso exclusivo en redes cableadas"
+                ],
+                answer: 2
+            },
+            {
+                question: "¿Qué función cumple la computación en la nube en las TDH?",
+                options: [
+                    "Proporcionar servicios informáticos a través de internet",
+                    "Reemplazar completamente los servidores locales",
+                    "Aumentar el almacenamiento físico de datos",
+                    "Evitar el uso de inteligencia artificial"
+                ],
+                answer: 0
+            },
+            {
+                question: "¿Cuál de las siguientes tecnologías está orientada al procesamiento masivo de datos?",
+                options: [
+                    "Apache Hadoop, MongoDB y TensorFlow",
+                    "SolidWorks, AutoCAD y MATLAB",
+                    "HTML, CSS y JavaScript",
+                    "Word, Excel y PowerPoint"
+                ],
+                answer: 0
+            },
+            {
+                question: "¿Qué busca garantizar la ciberseguridad IT y OT?",
+                options: [
+                    "La disponibilidad, confidencialidad e integridad de la información",
+                    "La desconexión de las redes públicas",
+                    "El anonimato total de los usuarios",
+                    "La eliminación automática de datos antiguos"
+                ],
+                answer: 0
+            },
+            {
+                question: "¿Qué elemento distingue a blockchain de otras bases de datos?",
+                options: [
+                    "La centralización de la información",
+                    "El almacenamiento físico en discos locales",
+                    "El uso de un libro mayor distribuido e inmutable",
+                    "La ausencia de criptografía"
+                ],
+                answer: 2
+            },
+            {
+                question: "¿Qué hace posible la función hash en una blockchain?",
+                options: [
+                    "La inmutabilidad y descentralización de los datos",
+                    "La conexión entre redes privadas",
+                    "La eliminación de bloques antiguos",
+                    "La compresión de datos de manera reversible"
+                ],
+                answer: 0
+            },
+            {
+                question: "¿Cuál fue la primera aplicación práctica de la tecnología blockchain?",
+                options: [
+                    "Ethereum",
+                    "Bitcoin",
+                    "Dogecoin",
+                    "Hyperledger"
+                ],
+                answer: 1
+            },
+            {
+                question: "¿Qué diferencia al machine learning del deep learning?",
+                options: [
+                    "El machine learning requiere datos estructurados; el deep learning no",
+                    "El deep learning no utiliza redes neuronales",
+                    "El machine learning no aprende patrones automáticamente",
+                    "El deep learning necesita datos estructurados"
+                ],
+                answer: 0
+            },
+            {
+                question: "¿Qué caracteriza a las realidades inmersivas?",
+                options: [
+                    "Su capacidad para replicar el mundo físico digitalmente",
+                    "Su limitación a los videojuegos",
+                    "Su uso exclusivo en educación",
+                    "Su dependencia de la robótica industrial"
+                ],
+                answer: 0
+            },
+            {
+                question: "¿Qué permite la tecnología háptica dentro de las realidades inmersivas?",
+                options: [
+                    "Simular el sentido del tacto y movimiento humano",
+                    "Transmitir datos mediante sonido",
+                    "Recrear olores y sabores digitales",
+                    "Reemplazar la visión por sensores térmicos"
+                ],
+                answer: 0
+            },
+            {
+                question: "¿Qué es el metaverso según el texto?",
+                options: [
+                    "Una red social tridimensional",
+                    "La tercera generación de internet basada en realidad virtual",
+                    "Una plataforma de inteligencia artificial",
+                    "Un lenguaje de programación inmersivo"
+                ],
+                answer: 1
+            },
+            {
+                question: "¿Qué ventaja ofrece la robótica colaborativa?",
+                options: [
+                    "Permite la interacción segura entre humanos y robots",
+                    "Elimina la necesidad de supervisión humana",
+                    "Solo realiza tareas administrativas",
+                    "Aumenta la latencia de los procesos"
+                ],
+                answer: 0
+            },
+            {
+                question: "¿Qué función tienen los gemelos digitales?",
+                options: [
+                    "Simular objetos físicos para optimizar procesos reales",
+                    "Reemplazar el almacenamiento en la nube",
+                    "Servir como redes neuronales artificiales",
+                    "Generar modelos de datos aleatorios"
+                ],
+                answer: 0
+            },
+            {
+                question: "¿Qué impacto tienen las TDH en los modelos empresariales tradicionales?",
+                options: [
+                    "Reorganizan los procesos hacia la digitalización",
+                    "Reducen la necesidad de formación del personal",
+                    "Eliminan la competencia empresarial",
+                    "Sustituyen la comunicación digital por física"
+                ],
+                answer: 0
+            },
+            {
+                question: "¿Qué uso da BBVA a los chatbots?",
+                options: [
+                    "Personalizar interacciones y reducir costes de atención",
+                    "Sustituir la banca en línea",
+                    "Controlar las transacciones internacionales",
+                    "Detectar fraudes financieros mediante visión artificial"
+                ],
+                answer: 0
+            },
+            {
+                question: "¿Qué caracteriza al Petit Hostel como ejemplo de TDH?",
+                options: [
+                    "Automatiza la reserva y el check-in sin interacción humana",
+                    "Utiliza drones para el mantenimiento del edificio",
+                    "Implementa blockchain en la gestión de habitaciones",
+                    "Solo acepta reservas presenciales"
+                ],
+                answer: 0
+            },
+            {
+                question: "¿Qué es el live shopping?",
+                options: [
+                    "Venta de productos en directo por streaming",
+                    "Compra mediante realidad aumentada",
+                    "Plataforma de IA para inversión",
+                    "Sistema de pago basado en blockchain"
+                ],
+                answer: 0
+            },
+            {
+                question: "¿Qué función cumplen los gemelos digitales en planta industrial?",
+                options: [
+                    "Reducir riesgos y tiempos de inactividad mediante simulación",
+                    "Aumentar el almacenamiento físico de materiales",
+                    "Sustituir la comunicación 5G por cable",
+                    "Reproducir videos de capacitación"
+                ],
+                answer: 0
+            },
+            {
+                question: "¿Cómo se utiliza blockchain en la industria?",
+                options: [
+                    "Para trazabilidad de la cadena de suministro",
+                    "Solo para almacenamiento de datos privados",
+                    "Para generar energía eléctrica",
+                    "Como sustituto de la inteligencia artificial"
+                ],
+                answer: 0
+            },
+            {
+                question: "¿Qué ventaja ofrece la computación en la nube en los negocios?",
+                options: [
+                    "Facilita decisiones más rápidas mediante edge computing",
+                    "Aumenta el coste operativo",
+                    "Elimina la necesidad de redes 5G",
+                    "Limita el acceso remoto a la información"
+                ],
+                answer: 0
+            },
+            {
+                question: "¿Qué papel cumple el big data en la proptech?",
+                options: [
+                    "Analizar datos inmobiliarios para tomar decisiones estratégicas",
+                    "Controlar la seguridad física de las propiedades",
+                    "Reemplazar agentes inmobiliarios humanos",
+                    "Reducir la calidad de los datos financieros"
+                ],
+                answer: 0
+            },
+            {
+                question: "¿Qué mejora fundamental aportan las TDH a la eficiencia operativa?",
+                options: [
+                    "Permiten prever problemas futuros mediante datos en tiempo real",
+                    "Eliminan completamente la intervención humana",
+                    "Disminuyen la conectividad digital",
+                    "Evitan la necesidad de mantenimiento"
+                ],
+                answer: 0
+            },
+            {
+                question: "¿Qué áreas investiga la industria 4.0 apoyada por TDH?",
+                options: [
+                    "Integración horizontal y sistemas ciberfísicos",
+                    "Exclusivamente la automatización mecánica",
+                    "Únicamente marketing digital",
+                    "Desarrollo de hardware doméstico"
+                ],
+                answer: 0
+            },
+            {
+                question: "¿Qué diferencia principal hay entre un sistema digital y uno analógico?",
+                options: [
+                    "El digital usa código binario; el analógico señales continuas",
+                    "El analógico es más estable y preciso",
+                    "El digital depende de circuitos analógicos externos",
+                    "Ambos procesan datos de la misma forma"
+                ],
+                answer: 0
+            },
+            {
+                question: "¿Qué función cumplen los datos digitales en la empresa?",
+                options: [
+                    "Sirven como base para tomar decisiones estratégicas",
+                    "Reducen la necesidad de innovación",
+                    "Reemplazan el análisis de mercado",
+                    "Se utilizan solo para almacenamiento pasivo"
+                ],
+                answer: 0
+            },
+            {
+                question: "¿Qué representa el análisis de datos dentro de una transformación digital?",
+                options: [
+                    "El conocimiento derivado de la información recopilada",
+                    "Una simple recopilación de estadísticas",
+                    "Un proceso opcional sin impacto empresarial",
+                    "La eliminación de datos antiguos"
+                ],
+                answer: 0
+            },
+            {
+                question: "¿Qué debe incluir una estrategia de transformación digital exitosa?",
+                options: [
+                    "Estrategia de datos, gestión de datos y plan de cambio",
+                    "Solo la compra de nueva tecnología",
+                    "Sustitución total del personal humano",
+                    "Rechazo de los sistemas en la nube"
+                ],
+                answer: 0
+            },
+            {
+                question: "¿Qué relación tienen los sistemas digitalizados con la información?",
+                options: [
+                    "Convierten datos analógicos en información legible por máquinas",
+                    "Dependen de señales continuas no digitales",
+                    "Eliminan la precisión de los procesos",
+                    "Requieren soporte físico para cada operación"
+                ],
+                answer: 0
+            },
+            {
+                question: "¿Por qué la transformación digital debe ser un programa continuo?",
+                options: [
+                    "Porque los datos y su análisis cambian constantemente",
+                    "Porque las empresas deben volver al sistema analógico",
+                    "Porque los algoritmos se eliminan tras cada ciclo",
+                    "Porque requiere reiniciar los sistemas periódicamente"
+                ],
+                answer: 0
+            }
+        ],
+        2: [
+            {
+                question: "¿Qué es una máquina virtual?",
+                options: ["Un software que simula un sistema de cómputo y puede ejecutar programas como si fuese una computadora real", "Un hardware especializado para virtualización", "Un sistema operativo modificado", "Una aplicación de escritorio"],
+                answer: 0
+            },
+            {
+                question: "¿Cuál es la principal ventaja de usar máquinas virtuales?",
+                options: ["Permite ejecutar múltiples sistemas operativos en una sola máquina física", "Aumenta la velocidad del procesador", "Reduce el consumo de energía", "Mejora la resolución de pantalla"],
+                answer: 0
+            },
+            {
+                question: "¿Qué es VirtualBox?",
+                options: ["Un software de virtualización gratuito y de código abierto", "Un sistema operativo", "Un navegador web", "Un editor de texto"],
+                answer: 0
+            },
+            {
+                question: "¿Cuál es una característica principal de VMware?",
+                options: ["Es una plataforma de virtualización comercial con versiones gratuitas y de pago", "Solo funciona en Linux", "No soporta Windows", "Es exclusivamente para servidores"],
+                answer: 0
+            },
+            {
+                question: "¿Qué es QEMU?",
+                options: ["Un emulador y virtualizador de código abierto", "Un sistema operativo", "Un compilador", "Un gestor de archivos"],
+                answer: 0
+            },
+            {
+                question: "¿Qué era Microsoft Virtual PC?",
+                options: ["Un software de virtualización descontinuado de Microsoft", "Un sistema operativo actual", "Un navegador web", "Una suite ofimática"],
+                answer: 0
+            },
+            {
+                question: "¿Cuánta RAM se recomienda asignar a una máquina virtual con Windows 10?",
+                options: ["Al menos 4 GB", "512 MB", "1 GB", "256 MB"],
+                answer: 0
+            },
+            {
+                question: "¿Qué sucede si asignas demasiada RAM a una máquina virtual?",
+                options: ["El sistema anfitrión puede volverse lento o inestable", "La máquina virtual funciona más rápido", "No hay ningún efecto", "Se mejora el rendimiento general"],
+                answer: 0
+            },
+            {
+                question: "¿Cuántos núcleos de CPU se recomienda asignar a una máquina virtual para uso básico?",
+                options: ["1-2 núcleos", "Todos los núcleos disponibles", "Al menos 8 núcleos", "Ningún núcleo específico"],
+                answer: 0
+            },
+            {
+                question: "¿Qué es el modo de red NAT en máquinas virtuales?",
+                options: ["Permite que la VM acceda a internet a través del host, pero no es visible desde la red externa", "Conecta directamente la VM a la red física", "Aísla completamente la VM de cualquier red", "Solo permite comunicación entre VMs"],
+                answer: 0
+            },
+            {
+                question: "¿Qué es el modo de red Bridge (Puente)?",
+                options: ["Conecta la VM directamente a la red física como si fuera un dispositivo independiente", "Aísla la VM de la red", "Solo permite acceso a internet", "Conecta VMs entre sí únicamente"],
+                answer: 0
+            },
+            {
+                question: "¿Qué es el modo de red Internal en máquinas virtuales?",
+                options: ["Permite comunicación solo entre VMs en el mismo host", "Conecta a internet directamente", "Conecta a la red física", "Aísla completamente cada VM"],
+                answer: 0
+            },
+            {
+                question: "¿Qué es el modo de red Host-only?",
+                options: ["Permite comunicación entre el host y las VMs, pero no acceso a redes externas", "Solo acceso a internet", "Solo comunicación entre VMs", "Acceso completo a la red física"],
+                answer: 0
+            },
+            {
+                question: "¿Cuál es el primer paso para instalar un sistema operativo en una máquina virtual?",
+                options: ["Crear una nueva máquina virtual y configurar sus especificaciones", "Descargar el sistema operativo", "Configurar la red", "Instalar las Guest Additions"],
+                answer: 0
+            },
+            {
+                question: "¿Qué necesitas para instalar un sistema operativo en una VM?",
+                options: ["Una imagen ISO del sistema operativo o un disco de instalación", "Solo la licencia del software", "Una conexión a internet", "Un disco duro externo"],
+                answer: 0
+            },
+            {
+                question: "¿Qué debes hacer después de instalar el sistema operativo en una VM?",
+                options: ["Instalar las Guest Additions o VMware Tools", "Reiniciar el host", "Cambiar la configuración de red", "Actualizar el hipervisor"],
+                answer: 0
+            },
+            {
+                question: "¿Cuál es la función principal de las Guest Additions en VirtualBox?",
+                options: ["Mejorar la integración entre el host y la VM (resolución, carpetas compartidas, etc.)", "Aumentar la velocidad del procesador", "Proporcionar antivirus", "Gestionar la red"],
+                answer: 0
+            },
+            {
+                question: "¿Qué son las VMware Tools?",
+                options: ["Un conjunto de utilidades que mejoran el rendimiento y la funcionalidad de las VMs en VMware", "Un sistema operativo", "Un navegador web", "Un editor de código"],
+                answer: 0
+            },
+            {
+                question: "¿Qué funcionalidad proporcionan las Guest Additions/VMware Tools?",
+                options: ["Resolución automática de pantalla, carpetas compartidas, portapapeles compartido y mejor rendimiento", "Solo mejoras de seguridad", "Solo actualizaciones automáticas", "Solo gestión de red"],
+                answer: 0
+            },
+            {
+                question: "¿Cuándo debes instalar las Guest Additions?",
+                options: ["Después de instalar completamente el sistema operativo invitado", "Antes de crear la VM", "Durante la instalación del SO", "Solo si hay problemas"],
+                answer: 0
+            },
+            {
+                question: "¿Qué es un snapshot en máquinas virtuales?",
+                options: ["Una captura del estado completo de la VM en un momento específico", "Una copia de seguridad del host", "Un tipo de red virtual", "Una configuración de hardware"],
+                answer: 0
+            },
+            {
+                question: "¿Para qué se utilizan los snapshots?",
+                options: ["Para poder restaurar la VM a un estado anterior si algo sale mal", "Para mejorar el rendimiento", "Para compartir archivos", "Para configurar la red"],
+                answer: 0
+            },
+            {
+                question: "¿Qué es la clonación de máquinas virtuales?",
+                options: ["Crear una copia exacta de una VM existente", "Mover una VM a otro host", "Cambiar la configuración de hardware", "Actualizar el sistema operativo"],
+                answer: 0
+            },
+            {
+                question: "¿Cuál es la diferencia entre un clon completo y un clon enlazado?",
+                options: ["El clon completo es independiente, el enlazado comparte archivos con la VM original", "No hay diferencia", "El enlazado es más grande", "El completo es más rápido"],
+                answer: 0
+            },
+            {
+                question: "¿Qué es la migración de máquinas virtuales?",
+                options: ["Mover una VM de un host físico a otro", "Cambiar el sistema operativo", "Actualizar el hardware virtual", "Modificar la configuración de red"],
+                answer: 0
+            },
+            {
+                question: "¿Qué tipos de migración existen?",
+                options: ["Migración en frío (VM apagada) y migración en caliente (VM en funcionamiento)", "Solo migración manual", "Solo migración automática", "Solo migración local"],
+                answer: 0
+            },
+            {
+                question: "¿Qué es un hipervisor?",
+                options: ["Software que permite crear y gestionar máquinas virtuales", "Un sistema operativo especializado", "Un tipo de procesador", "Una aplicación de red"],
+                answer: 0
+            },
+            {
+                question: "¿Cuáles son los dos tipos principales de hipervisores?",
+                options: ["Tipo 1 (bare metal) y Tipo 2 (hosted)", "Solo tipo empresarial y doméstico", "Solo gratuito y comercial", "Solo local y en la nube"],
+                answer: 0
+            },
+            {
+                question: "¿Qué caracteriza a un hipervisor Tipo 1?",
+                options: ["Se ejecuta directamente sobre el hardware físico", "Requiere un sistema operativo host", "Solo funciona en Windows", "Es menos eficiente"],
+                answer: 0
+            },
+            {
+                question: "¿Qué caracteriza a un hipervisor Tipo 2?",
+                options: ["Se ejecuta sobre un sistema operativo host existente", "Se ejecuta directamente sobre hardware", "No necesita sistema operativo", "Solo funciona en servidores"],
                 answer: 0
             }
         ]
@@ -236,6 +810,134 @@ const questionsDatabase = {
             {
                 question: "¿Qué son los factores de riesgo ergonómicos?",
                 options: ["Relacionados con la adaptación del trabajo al trabajador", "Solo factores químicos", "Solo factores físicos", "Solo factores mecánicos"],
+                answer: 0
+            },
+            
+            // 1.2 Contratos de trabajo y relaciones laborales
+            {
+                question: "¿Qué es un contrato de trabajo?",
+                options: ["Acuerdo entre empresario y trabajador por el que se prestan servicios bajo dependencia a cambio de retribución", "Solo un documento legal", "Únicamente un acuerdo verbal", "Solo una relación comercial"],
+                answer: 0
+            },
+            {
+                question: "¿Cuáles son los elementos esenciales de un contrato de trabajo?",
+                options: ["Prestación personal, dependencia, ajenidad y retribución", "Solo prestación personal", "Solo dependencia", "Solo retribución"],
+                answer: 0
+            },
+            {
+                question: "¿Cuál es la duración máxima del período de prueba para técnicos titulados?",
+                options: ["6 meses", "3 meses", "1 mes", "2 meses"],
+                answer: 0
+            },
+            {
+                question: "¿Qué tipos de contratos temporales existen?",
+                options: ["Por obra o servicio, eventual por circunstancias de la producción e interinidad", "Solo por obra o servicio", "Solo eventual", "Solo interinidad"],
+                answer: 0
+            },
+            {
+                question: "¿Cuál es la jornada máxima ordinaria de trabajo en España?",
+                options: ["40 horas semanales", "35 horas semanales", "45 horas semanales", "38 horas semanales"],
+                answer: 0
+            },
+            {
+                question: "¿Cuántos días de vacaciones anuales corresponden por ley?",
+                options: ["30 días naturales", "22 días laborables", "25 días naturales", "28 días laborables"],
+                answer: 0
+            },
+            {
+                question: "¿Qué es el salario mínimo interprofesional (SMI)?",
+                options: ["Retribución mínima que debe percibir cualquier trabajador", "Solo para trabajadores jóvenes", "Únicamente para contratos temporales", "Solo para trabajadores sin experiencia"],
+                answer: 0
+            },
+            {
+                question: "¿Cuáles son las causas de extinción del contrato de trabajo?",
+                options: ["Mutuo acuerdo, causas consignadas en el contrato, expiración del tiempo convenido, dimisión y despido", "Solo despido", "Solo dimisión", "Solo expiración del tiempo"],
+                answer: 0
+            },
+            
+            // 1.3 Seguridad Social y prestaciones
+            {
+                question: "¿Qué es la Seguridad Social?",
+                options: ["Sistema público que garantiza protección social ante determinadas contingencias", "Solo un seguro privado", "Únicamente para jubilados", "Solo para desempleados"],
+                answer: 0
+            },
+            {
+                question: "¿Cuáles son los regímenes de la Seguridad Social?",
+                options: ["General, especiales y autónomos", "Solo general", "Solo especiales", "Solo autónomos"],
+                answer: 0
+            },
+            {
+                question: "¿Qué contingencias cubre la Seguridad Social?",
+                options: ["Enfermedad, maternidad, invalidez, vejez, muerte, supervivencia, desempleo y accidentes", "Solo enfermedad", "Solo desempleo", "Solo jubilación"],
+                answer: 0
+            },
+            {
+                question: "¿Cuál es el período mínimo de cotización para acceder a la prestación por desempleo?",
+                options: ["360 días en los últimos 6 años", "180 días", "720 días", "90 días"],
+                answer: 0
+            },
+            {
+                question: "¿Qué porcentaje de la base reguladora se cobra en la prestación por desempleo?",
+                options: ["70% los primeros 180 días, 50% el resto", "60% todo el período", "80% todo el período", "50% todo el período"],
+                answer: 0
+            },
+            
+            // 1.4 Derechos y deberes laborales
+            {
+                question: "¿Cuáles son los derechos básicos de los trabajadores?",
+                options: ["Trabajo, libre sindicación, negociación colectiva, adopción de medidas de conflicto colectivo, huelga", "Solo derecho al trabajo", "Solo libre sindicación", "Solo negociación colectiva"],
+                answer: 0
+            },
+            {
+                question: "¿Cuáles son los deberes básicos de los trabajadores?",
+                options: ["Cumplir obligaciones específicas, observar medidas de seguridad, cumplir órdenes e instrucciones", "Solo cumplir horarios", "Solo obedecer al jefe", "Solo trabajar bien"],
+                answer: 0
+            },
+            {
+                question: "¿Qué es el derecho de huelga?",
+                options: ["Derecho de los trabajadores para la defensa de sus intereses", "Solo para sindicatos", "Únicamente en empresas públicas", "Solo en casos extremos"],
+                answer: 0
+            },
+            {
+                question: "¿Qué es un convenio colectivo?",
+                options: ["Acuerdo entre representantes de trabajadores y empresarios que regula condiciones de trabajo", "Solo un documento informativo", "Únicamente para grandes empresas", "Solo para funcionarios"],
+                answer: 0
+            },
+            
+            // 1.5 Prevención de riesgos laborales - Normativa
+            {
+                question: "¿Cuál es la ley principal de prevención de riesgos laborales en España?",
+                options: ["Ley 31/1995 de Prevención de Riesgos Laborales", "Ley 40/2015", "Ley 39/2015", "Ley 30/1992"],
+                answer: 0
+            },
+            {
+                question: "¿Cuáles son los principios de la acción preventiva?",
+                options: ["Evitar riesgos, evaluar riesgos, combatir riesgos en origen, adaptar trabajo a la persona", "Solo evitar riesgos", "Solo evaluar riesgos", "Solo usar equipos de protección"],
+                answer: 0
+            },
+            {
+                question: "¿Qué es un plan de prevención?",
+                options: ["Herramienta de gestión que integra la prevención en el sistema general de gestión de la empresa", "Solo un documento obligatorio", "Únicamente para grandes empresas", "Solo para empresas de riesgo"],
+                answer: 0
+            },
+            {
+                question: "¿Qué es la evaluación de riesgos?",
+                options: ["Proceso dirigido a estimar la magnitud de riesgos que no han podido evitarse", "Solo una inspección visual", "Únicamente medir ruido", "Solo revisar máquinas"],
+                answer: 0
+            },
+            {
+                question: "¿Cuáles son las modalidades de organización preventiva?",
+                options: ["Asunción personal, designación de trabajadores, servicio de prevención propio, servicio de prevención ajeno", "Solo servicio propio", "Solo servicio ajeno", "Solo designación de trabajadores"],
+                answer: 0
+            },
+            {
+                question: "¿Qué son los equipos de protección individual (EPI)?",
+                options: ["Equipos destinados a ser llevados por el trabajador para protegerle de riesgos", "Solo cascos", "Únicamente guantes", "Solo calzado de seguridad"],
+                answer: 0
+            },
+            {
+                question: "¿Cuándo deben utilizarse los EPI?",
+                options: ["Cuando los riesgos no puedan evitarse o limitarse por medios técnicos de protección colectiva", "Siempre", "Solo en trabajos peligrosos", "Solo cuando lo decida el trabajador"],
                 answer: 0
             }
         ]
@@ -332,18 +1034,245 @@ const questionsDatabase = {
                 question: "¿Qué caracteriza a los sistemas de tiempo real?",
                 options: ["Deben responder a eventos dentro de un tiempo determinado y crítico", "No tienen restricciones de tiempo", "Solo procesan por lotes", "Solo permiten procesamiento interactivo"],
                 answer: 0
+            },
+            
+            // Gestión de Procesos
+            {
+                question: "¿Qué es un proceso en un sistema operativo?",
+                options: ["Un programa en ejecución que incluye código, datos y estado del procesador", "Solo el código ejecutable de un programa", "Únicamente los datos de un programa", "Solo la memoria asignada"],
+                answer: 0
+            },
+            {
+                question: "¿Cuáles son los estados básicos de un proceso?",
+                options: ["Nuevo, Listo, Ejecutándose, Bloqueado, Terminado", "Solo Ejecutándose y Terminado", "Solo Listo y Bloqueado", "Solo Nuevo y Terminado"],
+                answer: 0
+            },
+            {
+                question: "¿Qué es el PCB (Process Control Block)?",
+                options: ["Estructura de datos que contiene toda la información sobre un proceso", "Solo el código del proceso", "Solo la memoria del proceso", "Solo los datos del proceso"],
+                answer: 0
+            },
+            {
+                question: "¿Qué información contiene el PCB?",
+                options: ["ID del proceso, estado, contador de programa, registros, información de memoria y archivos abiertos", "Solo el ID del proceso", "Solo el estado del proceso", "Solo los registros"],
+                answer: 0
+            },
+            {
+                question: "¿Qué es el cambio de contexto?",
+                options: ["Proceso de guardar el estado de un proceso y cargar el estado de otro", "Solo cambiar de programa", "Solo cambiar de usuario", "Solo cambiar de memoria"],
+                answer: 0
+            },
+            {
+                question: "¿Qué algoritmo de planificación ejecuta primero el proceso que llegó primero?",
+                options: ["FIFO (First In, First Out) o FCFS (First Come, First Served)", "SJF (Shortest Job First)", "Round Robin", "Prioridades"],
+                answer: 0
+            },
+            {
+                question: "¿Qué caracteriza al algoritmo Round Robin?",
+                options: ["Asigna un quantum de tiempo fijo a cada proceso de forma circular", "Ejecuta primero el proceso más corto", "Ejecuta según prioridades", "Ejecuta hasta completar cada proceso"],
+                answer: 0
+            },
+            {
+                question: "¿Qué es un hilo (thread)?",
+                options: ["Unidad básica de ejecución dentro de un proceso que comparte memoria con otros hilos", "Un proceso independiente", "Solo código ejecutable", "Solo datos compartidos"],
+                answer: 0
+            },
+            
+            // Gestión de Memoria
+            {
+                question: "¿Qué es la gestión de memoria en un SO?",
+                options: ["Administración del espacio de memoria principal para optimizar su uso", "Solo asignar memoria a programas", "Solo liberar memoria", "Solo controlar el disco duro"],
+                answer: 0
+            },
+            {
+                question: "¿Qué es la memoria virtual?",
+                options: ["Técnica que permite ejecutar programas más grandes que la memoria física disponible", "Solo memoria RAM", "Solo memoria del disco duro", "Solo memoria caché"],
+                answer: 0
+            },
+            {
+                question: "¿Qué es la paginación?",
+                options: ["División de la memoria en bloques de tamaño fijo llamados páginas", "Solo división del disco duro", "Solo división de archivos", "Solo división de procesos"],
+                answer: 0
+            },
+            {
+                question: "¿Qué es la segmentación?",
+                options: ["División de la memoria en bloques de tamaño variable según la lógica del programa", "Solo división en páginas fijas", "Solo división del disco", "Solo división de archivos"],
+                answer: 0
+            },
+            {
+                question: "¿Qué es el swapping?",
+                options: ["Intercambio de procesos entre memoria principal y almacenamiento secundario", "Solo intercambio de archivos", "Solo intercambio de datos", "Solo intercambio de programas"],
+                answer: 0
+            },
+            {
+                question: "¿Qué es la fragmentación interna?",
+                options: ["Espacio desperdiciado dentro de un bloque asignado que no se utiliza completamente", "Espacio libre entre bloques asignados", "Solo fragmentación del disco", "Solo fragmentación de archivos"],
+                answer: 0
+            },
+            {
+                question: "¿Qué es la fragmentación externa?",
+                options: ["Espacio libre total suficiente pero no contiguo para satisfacer una solicitud", "Espacio desperdiciado dentro de bloques", "Solo fragmentación del disco", "Solo fragmentación de archivos"],
+                answer: 0
+            },
+            
+            // Sistemas de Archivos
+            {
+                question: "¿Qué es un sistema de archivos?",
+                options: ["Método para organizar, almacenar y recuperar datos en dispositivos de almacenamiento", "Solo una carpeta", "Solo un archivo", "Solo un programa"],
+                answer: 0
+            },
+            {
+                question: "¿Cuáles son los componentes principales de un sistema de archivos?",
+                options: ["Archivos, directorios, metadatos y estructura de almacenamiento", "Solo archivos", "Solo directorios", "Solo metadatos"],
+                answer: 0
+            },
+            {
+                question: "¿Qué es un inodo en sistemas Unix/Linux?",
+                options: ["Estructura de datos que contiene metadatos de un archivo", "Solo el nombre del archivo", "Solo el contenido del archivo", "Solo el tamaño del archivo"],
+                answer: 0
+            },
+            {
+                question: "¿Qué información contiene un inodo?",
+                options: ["Permisos, propietario, tamaño, fechas y punteros a bloques de datos", "Solo el nombre del archivo", "Solo el contenido", "Solo el tamaño"],
+                answer: 0
+            },
+            {
+                question: "¿Qué es la tabla de asignación de archivos (FAT)?",
+                options: ["Estructura que mantiene información sobre la ubicación de archivos en el disco", "Solo una lista de archivos", "Solo nombres de archivos", "Solo tamaños de archivos"],
+                answer: 0
+            },
+            {
+                question: "¿Qué caracteriza al sistema de archivos NTFS?",
+                options: ["Soporte para archivos grandes, seguridad avanzada, compresión y cifrado", "Solo archivos pequeños", "Sin seguridad", "Solo para DOS"],
+                answer: 0
+            },
+            {
+                question: "¿Qué es el journaling en sistemas de archivos?",
+                options: ["Registro de cambios antes de aplicarlos para recuperación en caso de fallos", "Solo registro de accesos", "Solo registro de errores", "Solo registro de usuarios"],
+                answer: 0
+            },
+            
+            // Entrada/Salida y Dispositivos
+            {
+                question: "¿Qué es un driver o controlador de dispositivo?",
+                options: ["Software que permite al SO comunicarse con dispositivos de hardware específicos", "Solo hardware", "Solo firmware", "Solo aplicaciones"],
+                answer: 0
+            },
+            {
+                question: "¿Cuáles son los tipos principales de dispositivos de E/S?",
+                options: ["Dispositivos de bloque (discos) y dispositivos de carácter (teclado, ratón)", "Solo dispositivos de bloque", "Solo dispositivos de carácter", "Solo dispositivos de red"],
+                answer: 0
+            },
+            {
+                question: "¿Qué es el buffering en E/S?",
+                options: ["Uso de memoria temporal para almacenar datos durante transferencias", "Solo almacenamiento permanente", "Solo procesamiento de datos", "Solo transmisión directa"],
+                answer: 0
+            },
+            {
+                question: "¿Qué es el spooling?",
+                options: ["Técnica para gestionar trabajos de impresión mediante colas", "Solo impresión directa", "Solo almacenamiento", "Solo procesamiento"],
+                answer: 0
+            },
+            {
+                question: "¿Qué es DMA (Direct Memory Access)?",
+                options: ["Transferencia directa de datos entre dispositivos y memoria sin intervención del CPU", "Solo acceso por CPU", "Solo acceso por software", "Solo acceso manual"],
+                answer: 0
+            },
+            
+            // Seguridad y Protección
+            {
+                question: "¿Qué es la autenticación en un SO?",
+                options: ["Proceso de verificar la identidad de un usuario o proceso", "Solo asignar permisos", "Solo controlar accesos", "Solo cifrar datos"],
+                answer: 0
+            },
+            {
+                question: "¿Qué es la autorización?",
+                options: ["Proceso de determinar qué recursos puede acceder un usuario autenticado", "Solo verificar identidad", "Solo cifrar datos", "Solo registrar accesos"],
+                answer: 0
+            },
+            {
+                question: "¿Qué son los permisos de archivo en Unix/Linux?",
+                options: ["Lectura (r), escritura (w) y ejecución (x) para propietario, grupo y otros", "Solo lectura y escritura", "Solo para propietario", "Solo ejecución"],
+                answer: 0
+            },
+            {
+                question: "¿Qué significa el permiso 755 en notación octal?",
+                options: ["rwxr-xr-x (propietario: rwx, grupo: r-x, otros: r-x)", "rwxrwxrwx", "r--r--r--", "rwx------"],
+                answer: 0
+            },
+            {
+                question: "¿Qué es un virus informático?",
+                options: ["Programa malicioso que se replica insertándose en otros programas", "Solo un error de software", "Solo un problema de hardware", "Solo un archivo corrupto"],
+                answer: 0
+            },
+            {
+                question: "¿Qué es un firewall?",
+                options: ["Sistema de seguridad que controla el tráfico de red entrante y saliente", "Solo antivirus", "Solo backup", "Solo cifrado"],
+                answer: 0
+            },
+            
+            // Comandos y Utilidades del Sistema
+            {
+                question: "¿Qué hace el comando 'ls' en Unix/Linux?",
+                options: ["Lista el contenido de directorios", "Crea directorios", "Elimina archivos", "Copia archivos"],
+                answer: 0
+            },
+            {
+                question: "¿Qué hace el comando 'cd' en sistemas Unix/Linux?",
+                options: ["Cambia el directorio actual", "Copia directorios", "Crea directorios", "Elimina directorios"],
+                answer: 0
+            },
+            {
+                question: "¿Qué hace el comando 'mkdir'?",
+                options: ["Crea directorios", "Lista directorios", "Elimina directorios", "Cambia permisos"],
+                answer: 0
+            },
+            {
+                question: "¿Qué hace el comando 'rm' en Unix/Linux?",
+                options: ["Elimina archivos y directorios", "Crea archivos", "Copia archivos", "Mueve archivos"],
+                answer: 0
+            },
+            {
+                question: "¿Qué hace el comando 'chmod'?",
+                options: ["Cambia los permisos de archivos y directorios", "Cambia propietario", "Copia archivos", "Elimina archivos"],
+                answer: 0
+            },
+            {
+                question: "¿Qué hace el comando 'ps' en Unix/Linux?",
+                options: ["Muestra los procesos en ejecución", "Para procesos", "Crea procesos", "Elimina procesos"],
+                answer: 0
+            },
+            {
+                question: "¿Qué hace el comando 'kill' en Unix/Linux?",
+                options: ["Termina procesos enviando señales", "Crea procesos", "Lista procesos", "Pausa procesos"],
+                answer: 0
+            },
+            {
+                question: "¿Qué hace el comando 'top' en Unix/Linux?",
+                options: ["Muestra procesos en tiempo real con uso de recursos", "Solo lista procesos", "Solo muestra memoria", "Solo muestra CPU"],
+                answer: 0
+            },
+            {
+                question: "¿Qué hace el comando 'df' en Unix/Linux?",
+                options: ["Muestra el espacio libre y usado en sistemas de archivos", "Muestra archivos", "Crea archivos", "Elimina archivos"],
+                answer: 0
+            },
+            {
+                question: "¿Qué hace el comando 'du' en Unix/Linux?",
+                options: ["Muestra el uso de espacio en disco por directorios", "Muestra usuarios", "Crea directorios", "Elimina directorios"],
+                answer: 0
             }
         ]
     },
 lenguajesmarca: {
     1: [
         {
-            question: "¿Qué es un lenguaje de marcas?",
+            question: "En el contexto de sistemas empresariales distribuidos, ¿cuál es la principal ventaja arquitectónica de implementar lenguajes de marcas para el intercambio de metadatos entre aplicaciones heterogéneas?",
             options: [
-                "Un sistema de anotación que permite estructurar y dar formato a documentos mediante etiquetas",
-                "Un lenguaje de programación orientado a objetos",
-                "Una base de datos relacional",
-                "Un protocolo de comunicación de red"
+                "Facilitan la interoperabilidad semántica mediante esquemas de validación y transformaciones, permitiendo mapeo de datos estructurados",
+                "Reducen la latencia de red mediante compresión automática de datos binarios",
+                "Implementan cifrado nativo sin protocolos adicionales de seguridad",
+                "Ejecutan lógica de negocio mediante interpretación de scripts embebidos"
             ],
             answer: 0
         },
